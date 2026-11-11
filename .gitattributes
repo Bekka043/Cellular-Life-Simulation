@@ -2,3 +2,6 @@
 * text=auto
 *.java text eol=lf
 *.md text eol=lf
+*.yml text eol=lf
+*.gif binary
+*.png binary

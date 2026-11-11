@@ -1,0 +1,22 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Compile
+        run: javac -d out -sourcepath src src/cellsim/Main.java test/cellsim/SimulationTest.java
+      - name: Run tests
+        run: java -cp out cellsim.SimulationTest
+      - name: Smoke test (text mode)
+        run: java -cp out cellsim.Main --cli 1 100 1
