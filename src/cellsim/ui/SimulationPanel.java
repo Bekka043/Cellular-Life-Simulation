@@ -83,7 +83,8 @@ public final class SimulationPanel extends JPanel {
         scenarioDescription.setEditable(false);
         scenarioDescription.setFocusable(false);
         scenarioDescription.setOpaque(false);
-        scenarioDescription.setFont(scenarioDescription.getFont().deriveFont(Font.PLAIN, 12f));
+        // A text area uses a monospaced font by default on Windows; match the labels instead.
+        scenarioDescription.setFont(new JLabel().getFont().deriveFont(Font.PLAIN, 12f));
         scenarioDescription.setRows(3);
         sidebar.add(row(scenarioDescription));
         scenarioBox.addActionListener(e -> restart(randomSeed()));

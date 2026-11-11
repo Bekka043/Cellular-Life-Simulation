@@ -2,7 +2,7 @@
 
 A simulation of an infection in living tissue, inspired by Conway's Game of Life. Bacteria eat their way through human cells, the tissue calls in white blood cells to hunt them down, and whatever survives regrows.
 
-Written in Java with no dependencies beyond the JDK. Built as an object-oriented programming project for the Programming 2 course at Sapienza University of Rome.
+Written in Java with no dependencies beyond the JDK.
 
 ![Four bacterial colonies are cleared by white blood cells and the tissue regrows](docs/demo.gif)
 
